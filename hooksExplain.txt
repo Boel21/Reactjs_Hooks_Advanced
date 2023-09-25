@@ -1,0 +1,57 @@
+1 - What are Hooks:
+**** Hooks are the functions to use some react features in functional components.
+**** In other words, Hooks are functions that make Functional components work like Class components.
+
+**********************----Hooks-----***********************
+2 - useState: is a function to add State in functional component.
+====> What is a state> State is nothing but just values or variables of your component.
+
+3 - useEffect: is used to perform side effects in our component.
+====> What is a side effect> Side effects are actions wich are performed with the "Outside World", we perform a side effect when we need to reach outside of our react components to do something. For example: 
+    * -> Fetching data from API updating the DOM document & window, 
+    * -> Timer functions setTimeout & setInterval.
+====> 3 variation of useEffect:
+    * -> Without dependencies - it runs with first render and also run on any thing changes.
+    * -> With empty array - it runs only on first render.
+    * -> With variables - it runs on first render and runs with that variable change.
+
+4 - useContext: is used to manage global data in react application.
+    * -> Global State.
+    * -> Themes.
+    * -> Services.
+    * -> User Settins.
+====> Why do we need useContext: to pass data over multiple components, due all data in this hook is global. Create context requires 3 simple steps:
+    * -> Creating the context
+    * -> Providing the context.
+    * -> Consuming the context.
+
+5 - useRef: allows us to access DOM elements and for creating mutble variables which will not re-render the component.
+
+6 - useReducer: is used to manage state in our react application. In other words, useReducer works like a state management tool.
+====> What is State management: is used to manage all states of application in a simple way. Allways use the useReducer hook when you have a lot of states and methods to handle.
+
+7 - useLayoutEffect: works exacly the same as useEffect (also same syntax), but the difference is when it's run.
+    * -> useEffect Runs after the DOM is printed on the browser.
+    * -> useLayoutEffect runs before the DOM is printed on the browser.
+====> Whenever we want to run code before the DOM is printed, example Height, width, anything related to layout we can use useLayoutEffect, and it's runs synchronously, execute the first line and move to second line when the first is completed.
+====> The most common use case of the useLayoutEffect is to get the dimension of the layout. That's why it's name is useLayoutEffect.
+
+8 - useMemo: is used to apply Memoization in react.
+====> What is memoization: is a technique for improving the performance of code. It is useful to avoid expensive calculations on every render when the returned value
+is not change.
+    * -> useMemo is used for Memoize value.
+    * -> You cannot pass values as parameters.
+
+9 - useCallback: is used to return memoize function, it's also ueful for preventing functions from being re-created on re-rendering.
+    * -> useCallback is used to memoize function.
+    * -> Iprove the performance of our react application.
+    * -> useCallback sintax is the same as useMemo hook.
+    * -> You can pass values as parameters.
+
+10 - customHook: are basically a reusable function. In simple terms, customs hooks are your own hooks that yaou create for your own use and you can use them multiple tims in your proyect.
+    * -> customHook are your logic wich you created as reusable function.
+    * -> You can use multiple hooks and create something that will help you to skip repeated tasks in your proyects.
+    * -> Yo can use your custom hooks in differents proyects.
+
+Form handling ---> Formik
+Form Validation ----> Yup
